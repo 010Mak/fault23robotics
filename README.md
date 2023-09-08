@@ -1,9 +1,19 @@
-# fault23robotics
 
-## program built by mak ;)
+# robotics class project
 
-to download simply pip install libaries and run program
 
-this doesnt serve any purpose just a school assignment
 
-```git```
+
+## Authors
+
+- [@010Mak](https://www.github.com/010Mak)
+
+
+
+## Installation
+
+Install with python 3.10
+
+```bash
+ run main.py
+```
