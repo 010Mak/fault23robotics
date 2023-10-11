@@ -25,7 +25,6 @@ def print_colorful_artwork(artwork, colors):
         print()
 
 if __name__ == "__main__":
-    # Read the ASCII artwork from the file
     with open("artwork.txt", "r") as file:
         artwork = file.readlines()
 
@@ -33,7 +32,6 @@ if __name__ == "__main__":
     try:
         while True:
             os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console
-            # Increment the phase to give appearance of shifting colors
             phase += pi / 30
             colors = rainbow_gradient(max(len(line) for line in artwork) + len(artwork), phase, 2)
             print_colorful_artwork(artwork, colors)
