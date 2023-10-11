@@ -27,17 +27,17 @@ def print_colorful(text, colors, background_colors, speed):
     print(Style.RESET_ALL)  # Reset the style and move to the next line.
 
 if __name__ == "__main__":
+    # Print default word first
     word = "PYTHON"
-    colors = rainbow_gradient(len(word), 2)  # two color cycles through the word
-    background_colors = rainbow_gradient(len(word), 1)  # one color cycle through the word
+    colors = rainbow_gradient(len(word), 2)  
+    background_colors = rainbow_gradient(len(word), 1)  
     print_colorful(word, colors, background_colors, 0.5)
 
-    while True:
-        choice = input("Do you want to try with another word? (y/n): ").strip().lower()
-        if choice == 'n':
-            break
+    choice = input("Would you like to use a custom word? (y/n): ").strip().lower()
+    while choice == 'y':
         word = input("Enter the word: ")
         speed = float(input("Enter the speed (e.g., 0.5): "))
         colors = rainbow_gradient(len(word))
         background_colors = rainbow_gradient(len(word))
         print_colorful(word, colors, background_colors, speed)
+        choice = input("Would you like to use another custom word? (y/n): ").strip().lower()
